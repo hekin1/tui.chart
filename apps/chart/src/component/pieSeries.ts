@@ -442,7 +442,7 @@ export default class PieSeries extends Component {
         const endDegree = clockwise
           ? Math.min(startDegree + degree, DEGREE_360)
           : Math.max(startDegree + degree, DEGREE_0);
-        const outerAdjusted = radiusFactor ? inner + ((outer - inner) * radiusFactor) : outer;
+        const outerAdjusted = (typeof radiusFactor === "number") ? inner + ((outer - inner) * radiusFactor) : outer;
 
         sectorModels.push({
           type: 'sector',
