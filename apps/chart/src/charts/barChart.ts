@@ -38,6 +38,7 @@ import {
   BoxSeriesType,
 } from '@t/options';
 import { BarChartProps, SelectSeriesInfo } from '@t/charts';
+import BoxSeriesCustom from '@src/component/boxSeriesCustom';
 
 /**
  * @class
@@ -140,7 +141,8 @@ export default class BarChart extends Chart<BarChartOptions> {
     this.componentManager.add(Title);
     this.componentManager.add(Plot);
     this.componentManager.add(Legend);
-    this.componentManager.add(BoxSeries, { name: 'bar', stackChart });
+    // this.componentManager.add(BoxSeries, { name: 'bar', stackChart });
+    this.componentManager.add(BoxSeriesCustom, { name: 'bar', stackChart });
     this.componentManager.add(BoxStackSeries, { name: 'bar', stackChart });
     this.componentManager.add(ZeroAxis);
     this.componentManager.add(Axis, { name: 'yAxis' });

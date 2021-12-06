@@ -475,6 +475,7 @@ export interface BoxSeriesOptions extends BaseSeriesOptions {
   stack?: StackOptionType;
   eventDetectType?: BoxTypeEventDetectType;
   dataLabels?: BoxDataLabels;
+  widthPerSeries?: Array<number>;
 }
 
 export interface BarChartOptions extends BaseOptions {
@@ -483,6 +484,7 @@ export interface BarChartOptions extends BaseOptions {
   plot?: PlotOptions;
   legend?: NormalLegendOptions;
   theme?: BoxChartThemeOptions;
+  widthPerSeries?: Array<number>;
 }
 
 export interface ColumnChartOptions extends BaseOptions {
@@ -655,6 +657,7 @@ type ColumnLineChartSeriesOptions = {
   shift?: boolean;
   dataLabels?: DataLabelOptions;
   eventDetectType?: BoxTypeEventDetectType;
+  widthPerSeries?: Array<number>;
 } & BaseSeriesOptions;
 
 export interface ColumnLineChartOptions extends BaseOptions {
