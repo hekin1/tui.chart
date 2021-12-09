@@ -285,7 +285,7 @@ export default class PieSeries extends Component {
     }
 
     if (dataLabelsOptions.visible) {
-      const dataLabelData = seriesModel.map((m) => ({
+      const dataLabelData = seriesModel.filter(m => m.percentValue > 2).map((m) => ({
         ...m,
         value: `${pieTooltipLabelFormatter(m.percentValue)}`,
         theme: this.theme.dataLabels,
