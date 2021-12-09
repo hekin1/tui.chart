@@ -36,7 +36,7 @@ export default class TotalAggregate extends Component {
   }
 
   render({ layout, theme, chart }: ChartState<Options>) {
-    const totalAggregate = !!chart?.totalAggregate;
+    const totalAggregate = chart?.totalAggregate;
     this.isShow = (typeof totalAggregate === 'number');
 
     if (!this.isShow) {
