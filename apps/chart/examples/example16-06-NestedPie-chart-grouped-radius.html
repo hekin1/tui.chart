@@ -316,37 +316,49 @@
         },
       ],
     };
-      const options = {
-        theme: {
-          series: {
-            colors: ['#007398', '#A4123F', '#893B67', '#78AA00', '#00205B', '#DC8633', '#93328E', '#F2A900', '#F4364C'],
-          },
-        },
-        chart: { width: 430, height: 500, compareCircleRadius: 104, totalAggregate: 6.245 },
-        legend: { align: 'bottom' },
+    const options = {
+      theme: {
         series: {
-          errandcategories: {
-            radiusRange: {
-              inner: '30%',
-              outer: '40%',
+          colors: ['#007398', '#A4123F', '#1998D6', '#78AA00', '#00205B', '#DC8633', '#93328E', '#F2A900', '#F4364C'],
+          dataLabels: {
+            callout: {
+              useSeriesColor: true,
             },
-          },
-          errands: {
-            radiusRange: {
-              inner: '41%',
-              outer: '100%',
-            },
-            dataLabels: {
-              visible: true,
-              formatter: () => '',
-              pieSeriesName: {
-                visible: true,
-                anchor: 'outer',
-              },
+            pieSeriesName: {
+              useSeriesColor: false,
+              color: '#000',
+              fontSize: 13,
             },
           },
         },
-      };
+      },
+      chart: {
+        width: 500, height: 500, compareCircleRadius: 115, totalAggregate: 2.564,
+      },
+      legend: { align: 'bottom' },
+      series: {
+        errandcategories: {
+          radiusRange: {
+            inner: '30%',
+            outer: '40%',
+          },
+        },
+        errands: {
+          radiusRange: {
+            inner: '41%',
+            outer: '100%',
+          },
+          dataLabels: {
+            visible: true,
+            formatter: () => '',
+            pieSeriesName: {
+              visible: true,
+              anchor: 'outer',
+            },
+          },
+        },
+      },
+    };
 
       const chart = toastui.Chart.nestedPieChart({ el, data, options });
     </script>

@@ -230,7 +230,7 @@ export default class CustomLegend extends Component {
         "width": 88,
         "iconType": "dash",
         "chartType": "pie",
-        "rowIndex": 3,
+        "rowIndex": 2,
         "columnIndex": 1,
         "viewLabel": "Jämförelseområde",
         "color": "#000",

@@ -2,7 +2,7 @@ module.exports = (env, args) => ({
   mode: args.mode,
   devServer: {
     injectClient: false,
-    open: 'Google Chrome',
+    // open: 'Google Chrome',
     overlay: {
       warnings: true,
       errors: true,
@@ -13,6 +13,7 @@ module.exports = (env, args) => ({
     },
     contentBase: __dirname,
     host: '0.0.0.0',
+    port: '8081',
   },
   module: {
     rules: [
